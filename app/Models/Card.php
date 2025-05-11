@@ -60,6 +60,4 @@ class Card extends Model
             return collect([$fusion->card1, $fusion->card2])->sort()->values()->toJson();
         });
     }
-
- 
 }
