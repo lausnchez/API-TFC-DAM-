@@ -10,7 +10,8 @@ class CardController extends Controller
     // Devuelve todas las cartas
     public function index()
     {
-        return Card::all();
+        $cards = Card::with('effects')->get();
+        return response()->json($cards);
     }
 
     // Devuelve una carta
