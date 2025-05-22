@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Card extends Model
 {
     protected $table = 'cards';
-    
+    public $timestamps = false;
+
     protected $casts = [
         'cost'=>'int',
         'currency_cost'=>'int',

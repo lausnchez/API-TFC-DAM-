@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Effect extends Model
 {
     protected $table = 'effects';
-
+    public $timestamps = false;
+    
     protected $casts = [
         'active_turns' => 'int',
         'value' => 'int'

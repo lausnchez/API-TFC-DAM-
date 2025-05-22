@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Enemy extends Model
 {
     protected $table = 'enemies';
+    public $timestamps = false;
 
     protected $casts = [
         'health'=>'int',

@@ -1,22 +1,22 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Card;
-use App\Models\CardFusion;
 
+use App\Models\Item;
+use App\Models\CardFusion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class CardFusionController extends Controller
+class ItemFusionController extends Controller
 {
     public function index()
     {
-        return response()->json(DB::table('card_fusion')->get());
+        return response()->json(DB::table('item_fusion')->get());
     }
 
     public function show($id)
     {
-        $fusion = DB::table('card_fusion')->where('id', $id)->first();
+        $fusion = DB::table('item_fusion')->where('id', $id)->first();
         if (!$fusion) {
             return response()->json(null, 404);
         }
@@ -26,15 +26,15 @@ class CardFusionController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'card1' => 'required|exists:cards,id',
-            'card2' => 'required|exists:cards,id',
-            'card_result' => 'required|exists:cards,id',
+            'item1' => 'required|exists:items,id',
+            'item2' => 'required|exists:items,id',
+            'item_fusion' => 'required|exists:items,id',
         ]);
 
-        $id = DB::table('card_fusion')->insertGetId([
-            'card1' => $validated['card1'],
-            'card2' => $validated['card2'],
-            'card_result' => $validated['card_result'],
+        $id = DB::table('item_fusion')->insertGetId([
+            'item1' => $validated['item1'],
+            'item2' => $validated['item2'],
+            'item_fusion' => $validated['item_fusion'],
         ]);
 
         return response()->json(['id' => $id], 201);
@@ -43,12 +43,12 @@ class CardFusionController extends Controller
     public function update(Request $request, $id)
     {
         $validated = $request->validate([
-            'card1' => 'exists:cards,id',
-            'card2' => 'exists:cards,id',
-            'card_result' => 'exists:cards,id',
+            'item1' => 'exists:items,id',
+            'item2' => 'exists:items,id',
+            'item_fusion' => 'exists:items,id',
         ]);
 
-        $updated = DB::table('card_fusion')->where('id', $id)->update($validated);
+        $updated = DB::table('item_fusion')->where('id', $id)->update($validated);
 
         if (!$updated) {
             return response()->json(null, 404);
@@ -59,7 +59,7 @@ class CardFusionController extends Controller
 
     public function destroy($id)
     {
-        $deleted = DB::table('card_fusion')->where('id', $id)->delete();
+        $deleted = DB::table('item_fusion')->where('id', $id)->delete();
         if (!$deleted) {
             return response()->json(null, 404);
         }

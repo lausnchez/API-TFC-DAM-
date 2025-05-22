@@ -23,7 +23,6 @@ return new class extends Migration
             $table->text('image');
             $table->enum('target',['unique','all','self']);
             $table->float('rarity');
-            $table->timestamps();
         });
 
         // TABLA ENEMIES ----------------------------------------------------
@@ -35,7 +34,6 @@ return new class extends Migration
             $table->float('rarity');
             $table->enum('type',['normal','boss']);
             $table->integer('floor');
-            $table->timestamps();
         }); 
         
         // TABLA EFFECTS ----------------------------------------------------
@@ -45,7 +43,6 @@ return new class extends Migration
             $table->string('description');
             $table->integer('active_turns');
             $table->integer('value');
-            $table->timestamps();
         });   
         
         // TABLA ITEMS ----------------------------------------------------
@@ -55,7 +52,6 @@ return new class extends Migration
             $table->string('description');
             $table->integer('currency_cost');
             $table->float('rarity');
-            $table->timestamps();
         });
 
         // TABLA CHARACTER_PLAYER ----------------------------------------------------
@@ -67,7 +63,6 @@ return new class extends Migration
             $table->integer('stamina');
             $table->integer('max_items');
             $table->text('sprite')->nullable();
-            $table->timestamps();
         });
 
         // TABLA ITEM_FUSION ----------------------------------------------------
@@ -76,7 +71,6 @@ return new class extends Migration
             $table->unsignedBigInteger('item1');
             $table->unsignedBigInteger('item2');
             $table->unsignedBigInteger('item_fusion');
-            $table->timestamps();
 
             $table->foreign('item1')->references('id')->on('items')->onDelete('cascade');
             $table->foreign('item2')->references('id')->on('items')->onDelete('cascade');
@@ -88,7 +82,6 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_card');
             $table->unsignedBigInteger('id_effect');
-            $table->timestamps();
 
             $table->foreign('id_card')->references('id')->on('cards')->onDelete('cascade');
             $table->foreign('id_effect')->references('id')->on('effects')->onDelete('cascade');
@@ -99,7 +92,6 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_card');
             $table->unsignedBigInteger('id_character');
-            $table->timestamps();
 
             $table->foreign('id_card')->references('id')->on('cards')->onDelete('cascade');
             $table->foreign('id_character')->references('id')->on('character_player')->onDelete('cascade');
@@ -110,7 +102,6 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_item');
             $table->unsignedBigInteger('id_character');
-            $table->timestamps();
 
             $table->foreign('id_item')->references('id')->on('items')->onDelete('cascade');
             $table->foreign('id_character')->references('id')->on('character_player')->onDelete('cascade');
@@ -121,7 +112,6 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_enemy');
             $table->unsignedBigInteger('id_effect');
-            $table->timestamps();
 
             $table->foreign('id_enemy')->references('id')->on('enemies')->onDelete('cascade');
             $table->foreign('id_effect')->references('id')->on('effects')->onDelete('cascade');
@@ -133,7 +123,6 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_item');
             $table->unsignedBigInteger('id_effect');
-            $table->timestamps();
 
             $table->foreign('id_item')->references('id')->on('items')->onDelete('cascade');
             $table->foreign('id_effect')->references('id')->on('effects')->onDelete('cascade');

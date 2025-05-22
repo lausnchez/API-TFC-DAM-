@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Item;
 
 use Illuminate\Http\Request;
 
@@ -21,15 +22,15 @@ class ItemController extends Controller
     // Crear un Item
     public function store(Request $request)
     {
-        $card = Item::create($request->all());
+        $item= Item::create($request->all());
         return response()->json($item, 201);
     }
 
     // Actualizar un Item
     public function update(Request $request, $id)
     {
-        $card = Item::findOrFail($id);
-        $card->update($request->all());
+        $item = Item::findOrFail($id);
+        $item->update($request->all());
         return response()->json($item, 200);
     }
 

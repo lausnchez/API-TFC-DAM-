@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ItemFusion extends Model
 {
     protected $table = 'item_fusion';
+    public $timestamps = false;
 
     protected $casts = [
         'item1'=>'int',

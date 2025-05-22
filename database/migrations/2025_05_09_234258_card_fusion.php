@@ -16,10 +16,9 @@ return new class extends Migration
         // CARD_FUSION
         Schema::create('card_fusion', function(Blueprint $table){
             $table->id();
-            $table->string('card1');
-            $table->string('card2');
-            $table->string('card_result');
-            $table->timestamps();
+            $table->unsignedBigInteger('card1');
+            $table->unsignedBigInteger('card2');
+            $table->unsignedBigInteger('card_result');
 
             $table->foreign('card1')->references('id')->on('cards')->onDelete('cascade');
             $table->foreign('card2')->references('id')->on('cards')->onDelete('cascade');
