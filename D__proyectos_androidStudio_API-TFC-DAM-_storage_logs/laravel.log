@@ -1,0 +1,9 @@
+[2025-05-23 12:42:31] production.ERROR: There are no commands defined in the "clear" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"clear\" namespace. at /homepages/2/d4299027022/htdocs/API-TFC-DAM-/vendor/symfony/console/Application.php:669)
+[stacktrace]
+#0 /homepages/2/d4299027022/htdocs/API-TFC-DAM-/vendor/symfony/console/Application.php(720): Symfony\\Component\\Console\\Application->findNamespace()
+#1 /homepages/2/d4299027022/htdocs/API-TFC-DAM-/vendor/symfony/console/Application.php(266): Symfony\\Component\\Console\\Application->find()
+#2 /homepages/2/d4299027022/htdocs/API-TFC-DAM-/vendor/symfony/console/Application.php(175): Symfony\\Component\\Console\\Application->doRun()
+#3 /homepages/2/d4299027022/htdocs/API-TFC-DAM-/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony\\Component\\Console\\Application->run()
+#4 /homepages/2/d4299027022/htdocs/API-TFC-DAM-/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#5 {main}
+"} 
