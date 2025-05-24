@@ -25,7 +25,8 @@
     "target": "",
     "rarity": 0.0
 }
-
+```
+```json
 {
     "name": "Llama Mística",
     "description": "Inflige daño de fuego al objetivo.",
@@ -57,7 +58,8 @@
     "active_turns": 0,
     "value": 0
 }
-
+```
+```json
 {
     "name": "Veneno",
     "description": "Inflige daño durante varios turnos.",
@@ -88,7 +90,8 @@
     "currency_cost": 0,
     "rarity": 0.0
 }
-
+```
+```json
 {
     "name": "Poción de Vida",
     "description": "Recupera 50 puntos de salud.",
@@ -121,7 +124,8 @@
     "max_items": 0,
     "sprite": ""
 }
-
+```
+```json
 {
     "name": "Valen el Guerrero",
     "health": 100,
@@ -156,7 +160,8 @@
     "type": "",
     "floor": 0
 }
-
+```
+```json
 {
     "name": "Troll de la Cueva",
     "health": 150,
@@ -185,7 +190,8 @@
     "id_card": 0,
     "id_effect": 0
 }
-
+```
+```json
 {
     "id_card": 1,
     "id_effect": 3
@@ -211,7 +217,8 @@
     "card2": 0,
     "card_result": 0
 }
-
+```
+```json
 {
     "card1": 1,
     "card2": 2,
@@ -235,7 +242,8 @@
   "id_card": 0,
   "id_character": 0
 }
-
+```
+```json
 {
   "id_card": 5,
   "id_character": 2
@@ -259,7 +267,8 @@
   "id_item": 0,
   "id_character": 0
 }
-
+```
+```json
 {
   "id_item": 7,
   "id_character": 3
@@ -283,7 +292,8 @@
   "id_enemy": 0,
   "id_effect": 0
 }
-
+```
+```json
 {
   "id_enemy": 4,
   "id_effect": 2
@@ -307,7 +317,8 @@
   "id_item": 0,
   "id_effect": 0
 }
-
+```
+```json
 {
   "id_item": 10,
   "id_effect": 5
@@ -333,7 +344,8 @@
   "item2": 0,
   "item_fusion": 0
 }
-
+```
+```json
 {
   "item1": 3,
   "item2": 5,
