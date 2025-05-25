@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class EnemyController extends Controller
 {
     public function index() {
-         return Enemy::all(); 
+        $enemies = Enemy::with('effects')->get();
+         return response()->json($enemies); 
     }
 
     public function store(Request $request) {
