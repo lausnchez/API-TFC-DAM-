@@ -10,7 +10,8 @@ class ItemController extends Controller
     // Devuelve todas los Items
     public function index()
     {
-        return Item::all();
+        $items = Item::with('effects')->get();
+        return response()->json($items);
     }
 
     // Devuelve un Item
