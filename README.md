@@ -1,5 +1,5 @@
 # URL DE LA API: https://tfgvideojuego.lausnchez.es/
-
+La documentación de este README.md no está completamente al día, en caso de querer usarla, por favor, utilizar la documentación del link!
 ## 🃏 Cards
 
 | Método | Ruta             | Acción      |
